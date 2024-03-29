@@ -171,17 +171,18 @@ html, body {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Align items to the left and right */
+    justify-content: space-between; 
     align-items: center;
-    padding: 8px; /* Add padding for spacing */
+    /* Add padding for spacing */
+    padding: 8px;
 }
 
 .today-week {
     margin-left: 16px;
     color: #c7c5c8;
     text-decoration: none;
-    position: relative; /* Add position relative */
-    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
 
 .today-week:hover {
@@ -193,42 +194,47 @@ html, body {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -2px; /* Adjust the position of the line as needed */
+    /* Adjust the position of the line */
+    bottom: -2px;
     width: 100%;
-    height: 2px; /* Height of the line */
-    background-color: #000; /* Color of the line */
+    height: 2px;
+    background-color: #000; 
     transform-origin: bottom right;
-    transform: scaleX(0); /* Initially set to 0 width */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for animation */
+    /* Initially set to 0 width */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
 .today-week:hover::after {
     transform-origin: bottom left;
-    transform: scaleX(1); /* Expand the line on hover */
+    /* Expand the line on hover */
+    transform: scaleX(1);
 }
 
 
 .cel-feh {
     margin-right: 16px;
     background-color: #fff;
-    position: relative; /* Add relative positioning */
-    display: inline-block; /* Ensure the element is inline-block to apply width and height */
-    width: 40px; /* Set the width of the circle */
-    height: 40px; /* Set the height of the circle */
-    border-radius: 50%; /* Create a perfect circle using border-radius */
-    text-align: center; /* Center the text horizontally */
-    line-height: 30px; /* Center the text vertically */
+    position: relative;
+    /*to apply width and height */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* Create a perfect circle using border-radius */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
     color: #000;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for hover effect */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cel-feh:hover {
-    background-color: black; /* Change background color on hover */
-    color: white; /* Change text color on hover */
+    background-color: black;
+    color: white;
 }
 
 .weather {
