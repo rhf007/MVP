@@ -33,12 +33,43 @@ html, body {
     padding: 0 20px;
 }
 
+.search {
+    /*width of conatiner is determined by the content within it*/
+    width: max-content;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 28px;
+    background: #f6f6f6;
+    transition: box-shadow 0.25s;
+}
+
+/*when something inside .search gets focused*/
+.search:focus-within {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.search-input {
+    font-size: 16px;
+    color: #333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.search-input::placeholder,
+.search-icon {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 #weather {
     background-color: #fffaeb;
     width: 75%;
     height: 100%;
+    padding: 0 16px;
 }
-
 
 
 .inside-search-center, .inside-search-left p {
@@ -136,4 +167,137 @@ html, body {
 .text-overlay p {
     margin: 0;
     padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Align items to the left and right */
+    align-items: center;
+    padding: 8px; /* Add padding for spacing */
+}
+
+.today-week {
+    margin-left: 16px;
+    color: #c7c5c8;
+    text-decoration: none;
+    position: relative; /* Add position relative */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+.today-week:hover {
+    color: black;
+}
+
+/* Add the line for hover effect */
+.today-week::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the position of the line as needed */
+    width: 100%;
+    height: 2px; /* Height of the line */
+    background-color: #000; /* Color of the line */
+    transform-origin: bottom right;
+    transform: scaleX(0); /* Initially set to 0 width */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for animation */
+}
+
+.today-week:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1); /* Expand the line on hover */
+}
+
+
+.cel-feh {
+    margin-right: 16px;
+    background-color: #fff;
+    position: relative; /* Add relative positioning */
+    display: inline-block; /* Ensure the element is inline-block to apply width and height */
+    width: 40px; /* Set the width of the circle */
+    height: 40px; /* Set the height of the circle */
+    border-radius: 50%; /* Create a perfect circle using border-radius */
+    text-align: center; /* Center the text horizontally */
+    line-height: 30px; /* Center the text vertically */
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for hover effect */
+}
+
+.cel-feh:hover {
+    background-color: black; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.weather {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    margin: 24px 0;
+}
+
+.weather-cards {
+    background-color: #fff;
+    display:flex;
+    border: none;
+    border-radius: 24px;
+    width: 10%;
+    height: 130px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-day {
+    font-weight: 500;
+}
+
+.card-img {
+    width: 40px;
+}
+
+.navbar-divs {
+    display: flex;
+}
+
+.todays-highlights {
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.highlight-cards {
+    background-color: #fff;
+    width: 200px;
+    height: 140px;
+    margin: 16px;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.highlight-name {
+    color: #6e6e6e;
+    font-weight: 500;
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.highlight-value {
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: bold;
 }

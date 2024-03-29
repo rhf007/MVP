@@ -13,10 +13,17 @@
     <!-- LESSON: DIVs won't appear(their background colors at least)
     unless there is literally something inside the <div> tag-->
     <div id="search-div" class="main-content">
-        <div id="search-bar" class="inside-search-left">
+        <!-- <div id="search-bar" class="inside-search-left">
             <i class="fa-solid fa-magnifying-glass"></i>
             <p>Search for places</p>
-        </div>
+        </div> -->
+
+        <form>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input class="search-input" type="search" placeholder="Search for a city">
+            </div>
+        </form>
 
         <div class="inside-search-center">
             <img id="weather-image" src="../static/images/glass weather icons/Day/sunny.png">
@@ -47,7 +54,99 @@
             </div>
         </div>
     </div>
-    <div id="weather" class="main-content">ddd</div>
+
+    <div id="weather" class="main-content">
+        <nav class="navbar">
+            <div class="navbar-divs">
+            <a href="#" class="today-week">Today</a>
+            <a href="#" class="today-week">Week</a>
+            </div>
+            
+            <div class="navbar-divs">
+            <a href="#" class="cel-feh">°C</a>
+            <a href="#" class="cel-feh">°F</a>
+            </div>
+            
+        </nav>
+
+        <div class="weather">
+            <div class="weather-cards">
+                <p class="card-day">Sun</p>
+                <img class="card-img" src="../static/images/3d solid weather icons/Tshower.png">
+                <p class="card-weather">15°-7°</p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="card-day">Sun</p>
+                <img class="card-img" src="../static/images/3d solid weather icons/Tshower.png">
+                <p class="card-weather">15°-7°</p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="card-day">Sun</p>
+                <img class="card-img" src="../static/images/3d solid weather icons/Tshower.png">
+                <p class="card-weather">15°-7°</p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="card-day">Sun</p>
+                <img class="card-img" src="../static/images/3d solid weather icons/Tshower.png">
+                <p class="card-weather">15°-7°</p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="card-day">Sun</p>
+                <img class="card-img" src="../static/images/3d solid weather icons/Tshower.png">
+                <p class="card-weather">15°-7°</p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="card-day">Sun</p>
+                <img class="card-img" src="../static/images/3d solid weather icons/Tshower.png">
+                <p class="card-weather">15°-7°</p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="card-day">Sun</p>
+                <img class="card-img" src="../static/images/3d solid weather icons/Tshower.png">
+                <p class="card-weather">15°-7°</p>
+            </div>
+        </div>
+
+        <p class="todays-highlights">Today's Highlights</p>
+
+        <div class="highlights">
+            <div class="highlight-cards">
+                <p class="highlight-name">UV Index</p>
+                <p class="highlight-value"> 7.70 km/h</p>
+            </div>
+
+            <div class="highlight-cards">
+                <p class="highlight-name">UV Index</p>
+                <p class="highlight-value"> 7.70 km/h</p>
+            </div>
+
+            <div class="highlight-cards">
+                <p class="highlight-name">UV Index</p>
+                <p class="highlight-value"> 7.70 km/h</p>
+            </div>
+
+            <div class="highlight-cards">
+                <p class="highlight-name">UV Index</p>
+                <p class="highlight-value"> 7.70 km/h</p>
+            </div>
+
+            <div class="highlight-cards">
+                <p class="highlight-name">UV Index</p>
+                <p class="highlight-value"> 7.70 km/h</p>
+            </div>
+
+            <div class="highlight-cards">
+                <p class="highlight-name">UV Index</p>
+                <p class="highlight-value"> 7.70 km/h</p>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 </html>
