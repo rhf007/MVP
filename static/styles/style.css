@@ -87,23 +87,11 @@ html, body {
     margin-right: auto;
 }
 
-#search-bar {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    margin-top: 24px;
-}
-
-#search-bar p{
-    display: inline;
-    margin-left: 8px;
-}
-
 #weather-image {
     width: 80%;
 }
 
-#celsius-degree {
+#degree {
     font-size: 48px;
 }
 
@@ -211,6 +199,14 @@ html, body {
     transform: scaleX(1);
 }
 
+.today-week.active {
+    color: black; /* Change color for active link */
+}
+
+.today-week.active::after {
+    transform-origin: bottom left;
+    transform: scaleX(1); /* Expand the line for active link */
+}
 
 .cel-feh {
     margin-right: 16px;
@@ -235,6 +231,12 @@ html, body {
 .cel-feh:hover {
     background-color: black;
     color: white;
+}
+
+.cel-feh.active {
+    background-color: black;
+    color: white;
+    /* Add any additional styles for the active state */
 }
 
 .weather {
@@ -303,7 +305,11 @@ html, body {
 }
 
 .highlight-value {
-    margin-top: 32px;
-    font-size: 24px;
+    margin-top: 24px;
+    font-size: 20px;
     font-weight: bold;
+}
+
+#smaller-highlight-name {
+    font-size: 13px;
 }

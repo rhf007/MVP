@@ -13,15 +13,10 @@
     <!-- LESSON: DIVs won't appear(their background colors at least)
     unless there is literally something inside the <div> tag-->
     <div id="search-div" class="main-content">
-        <!-- <div id="search-bar" class="inside-search-left">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <p>Search for places</p>
-        </div> -->
-
         <form>
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input class="search-input" type="search" placeholder="Search for a city">
+                <input id="search-bar" class="search-input" type="search" placeholder="Search for a city">
             </div>
         </form>
 
@@ -30,14 +25,14 @@
         </div>
 
         <div class="inside-search-left">
-            <p id="celsius-degree">12°C</p>
+            <p id="degree">12°C</p>
         </div>
 
         <div class="inside-search-left">
             <p id="day-time">Monday, 16:00</p>
         </div>
 
-        <div class="inside-search-left little-info">
+        <!-- <div class="inside-search-left little-info">
             <img class="small-weather-images" src="../static/images/3d solid weather icons/mcloudy.png">
             <p>Mostly Cloudy</p>
         </div>
@@ -45,12 +40,12 @@
         <div class="inside-search-left little-info">
             <img class="small-weather-images" src="../static/images/3d solid weather icons/Lrain.png">
             <p>Rain - 30%</p>
-        </div>
+        </div> -->
 
         <div id="city-img-div" class="inside-search-center">
             <img src="../static/images/istockphoto-1406960186-612x612.jpg">
             <div class="text-overlay">
-                <p>New York, NY, USA</p>
+                <p id="text-overlay">New York, NY, USA</p>
             </div>
         </div>
     </div>
@@ -58,13 +53,13 @@
     <div id="weather" class="main-content">
         <nav class="navbar">
             <div class="navbar-divs">
-            <a href="#" class="today-week">Today</a>
-            <a href="#" class="today-week">Week</a>
+            <a href="#" class="today-week active" id="today">Today</a>
+            <a href="#" class="today-week" id="week">Week</a>
             </div>
             
             <div class="navbar-divs">
-            <a href="#" class="cel-feh">°C</a>
-            <a href="#" class="cel-feh">°F</a>
+            <a id="cel" href="#" class="cel-feh active">°C</a>
+            <a id="feh" href="#" class="cel-feh">°F</a>
             </div>
             
         </nav>
@@ -145,8 +140,14 @@
                 <p class="highlight-name">UV Index</p>
                 <p class="highlight-value"> 7.70 km/h</p>
             </div>
+
+            <div class="highlight-cards">
+                <p id="smaller-highlight-name" class="highlight-name">UV Index</p>
+                <p class="highlight-value"> 7.70 km/h</p>
+            </div>
         </div>
     </div>
     </div>
+    <script src="../static/scripts/body.js"></script>
 </body>
 </html>
