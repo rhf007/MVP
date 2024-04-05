@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         daytime.innerHTML = `${day}, ${hours}:${minutes}`;
                     }, 1000);
                     
-                    //TODO: Fetch a random image for the city using the Unsplash API(BACKEND)
+                    
                 }
                 
                 // update the search bar with the detected city and country info
@@ -241,8 +241,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (searchBar) {
                         // Update the search bar content with the detcted city, state, and country
                         searchBar.value = `${locationData.city}, ${locationData.principalSubdivision}, ${locationData.countryName}`;
+                        
                     }
                 }
+
+                
                 
                 // update the weather image
                 // check for the weather condition and day/night

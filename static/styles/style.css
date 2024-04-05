@@ -155,6 +155,7 @@ html, body {
 .text-overlay p {
     margin: 0;
     padding: 10px;
+    color: #000;
 }
 
 .navbar {
