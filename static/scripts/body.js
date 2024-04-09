@@ -112,9 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
         
-        
-        
-        
         // Function to watch user's location changes
         function watchLocation() {
             // if the browser supports the Geolocation API. 
@@ -233,7 +230,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 // update the search bar with the detected city and country info
                 function update_search_bar(locationData) {
-                    
                     //search bar
                     const searchBar = document.getElementById("search-bar");
                     
@@ -373,14 +369,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         highlights_values[6].innerHTML = `${wind_speed} km&#47;hr <br> ${wind_direction}&deg;`;
                         
                         //if the today link is active AKA clicked
-                        
-                        
-                        
-                        //if the today link is active AKA clicked
                         if (today.classList.contains("active")) {
                             //get the 15-minute time, forecast, weather_codes, and day/night
-                            
-                            
                             // Determine the temperature unit based on whether Celsius or Fahrenheit is active
                             let temperatureUnit = "°C";
                             if (document.getElementById("feh").classList.contains("active")) {
@@ -407,11 +397,9 @@ document.addEventListener("DOMContentLoaded", () => {
                             for (let i = 0; i < quart_mins.length; i++) {
                                 // update the days with the 15 minute windows/intervals
                                 card_days[i].innerHTML = quart_mins[i].slice(-5);
-                                
                                 //weather condition and day/night
                                 let weather_code = quart_mins_weather_code[i];
                                 let is_day = quart_mins_is_day[i];
-                                
                                 //replace card image with the right one
                                 card_imgs[i].src = update_weather_img(weather_code, is_day);
                                 //update weather for each 15-minute window/interval
@@ -425,10 +413,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             let daily_weather_codes = data.daily.weather_code;
                             let daily_min_temp = data.daily.apparent_temperature_min;
                             let daily_max_temp = data.daily.apparent_temperature_max;
-                            
-                            let temperatureUnit = "°C";
-                            
-                            
                             let fahrenheitLink = document.getElementById("feh");
                             fahrenheitLink.addEventListener("click", function() {
                                 // Check if the week link is active
